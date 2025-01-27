@@ -26,8 +26,6 @@ jobs:
        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
        Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "@l4iniw4k" -Force)
-       echo IP:
-       find /i "ngrok\ngrok.exe" >Nul && curl -s localhost:4040/api/tunnels
        echo Username: runneradmin
        echo Password: @l4iniw4k
        
